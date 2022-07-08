@@ -4,40 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="#">
-  <script defer src="/3/3_index.js"></script>
+  <script defer src="/4/4_index.js"></script>
   
-  <title>Exercício 3</title>
+  <title>Exercício 4</title>
 
   <style>
 
     body {
       display: block;
-      
-    }
-
-    .container {
-      max-width: 200px;
-    }
-
-    input {
-      margin: 20px;
-      width: 100%;
     }
 
 
     h1 {
-      font-size: 16px;
+      text-align: center;
+      color: rgb(53, 53, 53);
+      font-size: 20px;
     }
-    
-    /* Impedindo a caixa de number */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+
+    .container {
+     margin: 50px auto;
+     text-align: center;
     }
-    /* Firefox */
-    input[type=number] {
-      -moz-appearance: textfield;
+
+    .container1 {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    thead th,  tfoot th {
+      padding: 10px 50px;
+      border: 1px solid;
+      background-color: #555ccc;
+      color: white;
+    }
+
+    tbody th {
+      padding: 10px 50px;
+      border: 1px solid;
+      background-color: #eee;
+    }
+
+    tfoot th:last-child {
+      padding: 10px 50px;
+      border: 1px solid;
+      background-color: rgb(237, 56, 56);
+    }
+    tfoot th:nth-child(2) {
+      background-color: rgb(7, 197, 137);
     }
     
   </style>
@@ -45,34 +58,43 @@
 </head>
 <body>  
 
+  
 
-  <h1> 3 – Peça ao usuário para digitar 5 números em uma caixa de texto. Verifique qual é
-    o maior número e exiba-o.
-    </h1>
-
-    <br> 
-      <p>Digite a idade das pessoas que você gosta e veja quem já é de maior</p>
-    <br>
+  <h1> 4 – Peça ao usuário para digitar um array de idades. Após isso, exiba quantas
+    pessoas são maiores de idade e quantas são menores.
+  </h1>
 
     <div class="container">
+      <p>Digite o nome e a  idade das pessoas que você gosta! <br><br> Veja quem já é de maior e quem não é</p>
+     
+      <label for="#">
+        <input type="text" placeholder="Nome" class="nome_input">
+        <input type="number" placeholder="Idade" class="idade_input">
+        <button class="btn_enviar">Enviar</button>
+      </label>
 
-      <label for="">Números </label>
-      <input type="number" class="numeros"> 
-      <button class="button">Enviar</button>
-      <p class="msgNumero">Qual o primeiro Número?</p>
-      <br>
-      <p>Último número digitado</p>
-      <p class="mostraNum">__</p>
-      
-      <!-- <p>Todos os número digitados</p>
-      <p class="mostrarTodos">__</p>
-      <br> -->
-      
-      <label for="">O maior número digitado foi</label>
-      <input type="text" class="maiorNotas" onlyread>
-      <p class="pNumeros"></p>
-      
-      <button class="tentar">Tentar novamente</button>
+        <table class="container1">
+          
+          <thead>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Maior de 18</th>
+            <th>Menor de 18</th>
+          </thead>
+          
+          <tbody class="corpo_tabela">
+            
+          </tbody>
+
+          <tfoot>
+            <th>Total maior de idade</th>
+            <th>0</th>
+            <th>Total Menor de idade</th>
+            <th>0</th>
+          </tfoot>
+          
+        </table>
+    
     </div>
 
 </body>

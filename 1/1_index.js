@@ -8,8 +8,6 @@ let btnTentar = document.querySelector('.tentar')
 
 let numArray = [];
 
-
-
 function addNumero (){
 
   let valorInput = numeros.value;
