@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <script defer src="/3/3_index.js"></script>
+  
+  <title>Exercício 3</title>
+
+  <style>
+
+    body {
+      display: block;
+      
+    }
+
+    .container {
+      max-width: 200px;
+    }
+
+    input {
+      margin: 20px;
+      width: 100%;
+    }
+
+
+    h1 {
+      font-size: 16px;
+    }
+    
+    /* Impedindo a caixa de number */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    
+  </style>
+
+</head>
+<body>  
+
+
+  <h1> 3 – Peça ao usuário para digitar 5 números em uma caixa de texto. Verifique qual é
+    o maior número e exiba-o.
+    </h1>
+
+    <br> 
+      <p>Digite a idade das pessoas que você gosta e veja quem já é de maior</p>
+    <br>
+
+    <div class="container">
+
+      <label for="">Números </label>
+      <input type="number" class="numeros"> 
+      <button class="button">Enviar</button>
+      <p class="msgNumero">Qual o primeiro Número?</p>
+      <br>
+      <p>Último número digitado</p>
+      <p class="mostraNum">__</p>
+      
+      <!-- <p>Todos os número digitados</p>
+      <p class="mostrarTodos">__</p>
+      <br> -->
+      
+      <label for="">O maior número digitado foi</label>
+      <input type="text" class="maiorNotas" onlyread>
+      <p class="pNumeros"></p>
+      
+      <button class="tentar">Tentar novamente</button>
+    </div>
+
+</body>
+</html>

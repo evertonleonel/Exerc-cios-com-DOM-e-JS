@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <script defer src="/2/2_index.js"></script>
+  
+  <title>Exercício 2</title>
+
+  <style>
+
+    body {
+      display: block;
+      
+    }
+
+    .container {
+      max-width: 200px;
+    }
+
+    input {
+      margin: 20px;
+      width: 100%;
+    }
+
+
+    h1 {
+      font-size: 16px;
+    }
+    
+    /* Impedindo a caixa de number */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    
+  </style>
+
+</head>
+<body>  
+
+
+  <h1>2  – Insira uma caixa de texto na tela e solicite que o usuário digite 5 números, após
+    isso mostre o quadrado de cada número digitado.
+    </h1>
+
+    <br> 
+      <p>Digite 5 números abaixo</p>
+    <br>
+
+    <div class="container">
+
+      <label for="">Números </label>
+      <input type="number" class="numeros"> 
+      <button class="button">Enviar</button>
+      <p class="msgNumero">Qual o primeiro Número?</p>
+      <br>
+      <p>Último número digitado</p>
+      <p class="mostraNum">__</p>
+      
+      <!-- <p>Todos os número digitados</p>
+      <p class="mostrarTodos">__</p>
+      <br> -->
+      
+      <label for="">Quadrado de cada número</label>
+      <input type="text" class="quadradoNotas" onlyread>
+      <p class="pNumeros"></p>
+      
+      <button class="tentar">Tentar novamente</button>
+    </div>
+
+</body>
+</html>
