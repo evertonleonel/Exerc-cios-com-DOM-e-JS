@@ -1,5 +1,7 @@
 let div = document.querySelector('div')
 let teste = document.querySelector('h1')
+const btnImg = document.querySelector('.btnImg');
+const imgs = document.querySelector('.imagens');
 // let textos = document.createTextNode('salve')
 
 // teste.appendChild(textos);
@@ -38,4 +40,7 @@ criarBotão()
 // O innerHtml modifica o texto e permite modificar a estrutura HTML.
 
 
+btnImg.addEventListener('click', function(){
+  imgs.src ='/estudo_criacao_elementos/img/d2.jpg' 
+})
 
