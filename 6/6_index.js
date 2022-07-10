@@ -2,22 +2,29 @@ const nomes = document.querySelector('.nomes');
 const invertido = document.querySelector('.invertido');
 const botao = document.querySelector('.botao')
 
-const $nomes = nomes.value;
-let $invertido = invertido.value;
+const arrayNome = [];
 
-arrayNome = [];
+botao.addEventListener('click', function enviar(){
+    const nome = nomes.value;
 
-    arrayNome.push($nomes);
-        console.log(arrayNome)
+    if( nome == '' ) return;
+    if( nome == null ) return;
+    if( nome == undefined ) return;
 
-// botao.addEventListener('click', function enviar(){
+    console.log('antes do split', nome)
+    const nomesSplit = nome.split(',');
+    console.log('depois do split', nomesSplit)
 
-//   if( ($nomes !=="") && ($nomes !== null) && ($nomes !== undefined)){
-//     arrayNome.reverse()
-//   }
- 
-// })
+    nomesSplit.forEach(novoNome => {
+        arrayNome.push(novoNome.trim());
+    })
 
+    arrayNome.reverse()
+    invertido.value = '';
 
-// $invertido.innerHTML = arrayNome[0];
+    arrayNome.forEach(value => {
+        invertido.value += value + '\n'
+    })
 
+    arrayNome.reverse()
+})

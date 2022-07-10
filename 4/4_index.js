@@ -2,17 +2,8 @@ const nome_input = document.querySelector('.nome_input');
 const idade_input = document.querySelector('.idade_input');
 const btn_enviar = document.querySelector('.btn_enviar');
 const corpo_tabela = document.querySelector('.corpo_tabela');
-
-// let numArray = [];
-
-
-  // nome_input.addEventListener('keyup',function(e){
-  //   //Se teclou ENTER (13)
-  //   if(e.keyCode === 13){
-  //     e.preventDefault(); //Impede qualquer cagada do enter
-      
-  //   }
-  // })
+const totalMaiorIdade = document.querySelector('.totalMaiorIdade');
+const totalMenorIdade = document.querySelector('.totalMenorIdade');
 
   function pega_Idade(){
     const user_idade = idade_input.value;
@@ -38,49 +29,27 @@ const corpo_tabela = document.querySelector('.corpo_tabela');
     const tabela = corpo_tabela;
     const qtdLinhas = tabela.rows.length;
     const linha = tabela.insertRow(qtdLinhas);
+
+    console.log(totalMaiorIdade.innerHTML);
     
-    
-    
+    const ehMaiorDeIdade = idade >= 18;
+
     celula1.innerHTML = nome;
     celula2.innerHTML = idade;
-    celula3.innerHTML = (idade >= 18) ? 'Sim' : '';
-    celula4.innerHTML = (idade < 18) ?  'Sim' : '';
-    
-    //pega_Idade()
-    //pegar_nome()
- 
-    //criarTabela();
-    console.log(linha.tr[th])
+
+    if( ehMaiorDeIdade ) {
+      celula3.innerHTML = 'Sim'
+      celula4.innerHTML = '-';
+      totalMaiorIdade.innerHTML = parseInt(totalMaiorIdade.innerHTML)+1;
+    } else {
+      celula3.innerHTML = '-'
+      celula4.innerHTML = ehMaiorDeIdade ? '-' : 'Sim';
+      totalMenorIdade.innerHTML = parseInt(totalMenorIdade.innerHTML)+1;
+    }
+
   })
   
  
   
-  // totalMaior(celula3)
 
-  // function criarTabela(infoUsuario) {
-
-  //       function Usuario (){
-
-  //         this.nome = nome;
-  //         this.idade = idade;
-
-  //         this.mudarNome = function (nomePessoa){
-  //           nome = nomePessoa;
-  //         } 
-
-  //         this.pegarNome = function (pegaNome){
-  //           return nome;
-  //         }
-  //       }
-
-  //       let novoUsuario = new Usuario;
-        
-  //       novoUsuario.mudarNome('user_name');
-  //       novoUsuario.pegarPegar()
-
-  //       novoUsuario.mudarNome(pegar_nome_e_idade_Users);
-  
-  //   listarConteudoUsuario(users);
-  // }
-     
 
