@@ -24,18 +24,16 @@
       width: 100%;
     }
 
-
     h1 {
       font-size: 16px;
     }
     
-    /* Impedindo a caixa de number */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
-    /* Firefox */
+
     input[type=number] {
       -moz-appearance: textfield;
     }
@@ -56,7 +54,7 @@
 
     <div class="container">
 
-      <label for="">Números </label>
+      <label for="#">Números </label>
       <input type="number" class="numeros"> 
       <button class="button">Enviar</button>
       <p class="msgNumero">Qual o primeiro Número?</p>
@@ -64,12 +62,12 @@
       <p>Último número digitado</p>
       <p class="mostraNum">__</p>
       
-      <!-- <p>Todos os número digitados</p>
-      <p class="mostrarTodos">__</p>
-      <br> -->
+      <p>Todos os número digitados</p>
+      <p class="todosNumerosDigitados">__</p>
+      <br>
       
-      <label for="">Quadrado de cada número</label>
-      <input type="text" class="quadradoNotas" onlyread>
+      <label for="#">Quadrado de cada número</label>
+      <input type="text" class="quadradoNotas" readonly>
       <p class="pNumeros"></p>
       
       <button class="tentar">Tentar novamente</button>

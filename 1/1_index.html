@@ -12,7 +12,6 @@
 
     body {
       display: block;
-      
     }
 
     .container {
@@ -23,7 +22,6 @@
       margin: 20px;
       width: 100%;
     }
-
 
     h1 {
       font-size: 16px;
@@ -44,8 +42,7 @@
   </style>
 
 </head>
-<body>  
-
+<body>
 
   <h1>1 – Insira uma caixa de texto na tela que permita somente números. Baseado no
     valor digitado, calcule a média das notas digitadas pelo usuário.</h1>
@@ -63,15 +60,12 @@
       <br>
       <p>Número digitado</p>
       <p class="mostraNum">--</p>
-      <br>
       <p> Todos os números digitados</p>
-      <p class="todosNumerosDigitados"></p>
+      <p class="todosNumerosDigitados">--</p>
       <br>
       
       <label for="#">Média</label>
-      <input type="text" class="mediaNotas" onlyread>
-      <p class="pNumeros"></p>
-      
+      <input type="text" class="mediaNotas" readonly>
       <button class="tentar">Tentar novamente</button>
     </div>
 

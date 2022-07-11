@@ -7,13 +7,13 @@ const mostraNum = document.querySelector('.mostraNum');
 const numerosDigitados = document.querySelector('.todosNumerosDigitados');
 const btnTentar = document.querySelector('.tentar');
 
-const numArray = [];
+let numArray = [];
 
 function addNumero(){
   const valorInput = numeros.value;
 
   if( numArray.length >= 5 ) {
-    console.log('Você pode informar apenas 5 números.')
+    alert('Você pode informar apenas 5 números. Tente novamente!');
     return;
   }
 

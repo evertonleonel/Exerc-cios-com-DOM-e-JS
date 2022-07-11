@@ -12,7 +12,6 @@
 
     body {
       display: block;
-      
     }
 
     .container {
@@ -24,18 +23,16 @@
       width: 100%;
     }
 
-
     h1 {
       font-size: 16px;
     }
     
-    /* Impedindo a caixa de number */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
-    /* Firefox */
+
     input[type=number] {
       -moz-appearance: textfield;
     }
@@ -45,7 +42,6 @@
 </head>
 <body>  
 
-🤡
   <h1> 3 – Peça ao usuário para digitar 5 números em uma caixa de texto. Verifique qual é
     o maior número e exiba-o.
     </h1>
@@ -56,20 +52,21 @@
 
     <div class="container">
 
-      <label for="">Números </label>
-      <input type="number" class="numeros"> 
+      <label for="#">Números </label>
+      <input type="number" class="numeros">
       <button class="button">Enviar</button>
+      <p class="limiteNumeros"></p>
       <p class="msgNumero">Qual o primeiro Número?</p>
       <br>
       <p>Último número digitado</p>
       <p class="mostraNum">__</p>
-      
-      <!-- <p>Todos os número digitados</p>
-      <p class="mostrarTodos">__</p>
-      <br> -->
-      
-      <label for="">O maior número digitado foi</label>
-      <input type="text" class="maiorNotas" onlyread>
+      <br>
+      <p> Todos os números digitados</p>
+      <p class="todosNumerosDigitados"></p>
+      <br>
+        
+      <label for="#">O maior número digitado foi</label>
+      <input type="text" class="maiorNotas" readonly>
       <p class="pNumeros"></p>
       
       <button class="tentar">Tentar novamente</button>
