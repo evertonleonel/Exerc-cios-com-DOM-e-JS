@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <script defer src="./5_index.js"></script>
+
+  <title>Exercício 5</title>
+
+  <style>
+
+    body {
+      background-color: #ccc;
+    }
+
+    h1, h3 {
+      text-align: center;
+      align-items: center;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+
+    form {
+      max-width: 500px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    
+    button {
+      padding: 20px;
+      width: 200px;
+    }
+
+  </style>
+
+</head>
+<body>
+    <h1>Desafio 5 – Crie um programa que entre com os dados de altura e sexo(Utilizar letras como
+      M, F para facilitar) de 5 pessoas. <br> Imprima na tela quantas pessoas são do sexo
+      masculino e quantas pessoas são do sexo feminino.<br> Mostre também qual é a maior
+      altura e se essa altura é de um homem ou uma mulher</h1>
+
+      <h3>Dados do usuário</h3>
+
+      <form action="#" method ='get'>
+
+        <fieldset>
+
+          <legend>Dados do usuário</legend>
+
+          <h3> Informe sua altura e sexo</h3>
+
+            <label for="alturaUsuario">Altura</label>
+           
+            <input type="text" name="" id="alturaUsuario">
+
+            <label for="masculino">M</label>
+            <input type="checkbox" name="masculino" id="masculino">
+
+            <label for="feminino">F</label>
+            <input type="checkbox" name="feminino" id="feminino">
+  
+         
+        </fieldset>
+        <button class="btnEnviar" type="button" disabled>Enviar</button>
+       
+      </form>
+
+      <br>
+
+      <label for="mostrarAltura">
+        <input type="text" id="mostrarAltura">
+        Maior Altura informada
+      </label>
+      <p>A maior altura informada é de:</p>
+     
+      <br>
+      <br>
+      <h4>Quantidade de pessoas de cada sexo</h4>
+      <label for="totalM">
+        <input type="text" name="" id="totalM">
+          Masculino
+        <br>
+        <label for="totalM">
+          <input type="text" name="" id="totalM">
+          Feminino
+      </label>
+
+
+
+</body>
+</html>

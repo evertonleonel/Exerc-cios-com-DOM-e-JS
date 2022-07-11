@@ -83,9 +83,8 @@ function addNumero(){
 botao.addEventListener('click', addNumero);
 
 numeros.addEventListener('keyup', function(e){
-  //Se teclou ENTER (13)
   if(e.keyCode === 13){
-    e.preventDefault(); //Impede qualquer cagada do enter
+    e.preventDefault();
     addNumero();
   }
 })

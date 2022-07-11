@@ -26,5 +26,7 @@ botao.addEventListener('click', function enviar(){
         invertido.value += value + '\n'
     })
 
-    arrayNome.reverse()
-})
+    arrayNome.reverse();
+
+     nomes.value= "";
+});

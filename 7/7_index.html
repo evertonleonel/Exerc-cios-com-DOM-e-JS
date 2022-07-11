@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <script defer src="/7/7_index.js"></script>
+  
+  <title>Exercício 7</title>
+
+  <style>
+
+    fieldset {
+      max-width: 300px;
+    }
+
+    #data {
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    .divFlex {
+      display: flex;
+    }
+
+    .divFlex p {
+      margin: 10px;
+      font-size: 20px;
+    }
+
+  </style>
+
+</head>
+<body>  
+
+  <h1>
+    7 – Peça para o usuário digitar uma data (pode utilizar componente de calendário).
+    Exiba separadamente o dia, o mês e o ano.
+  </h1>
+
+  <fieldset>
+
+    <legend>Escolha uma data</legend>
+    <label for="data"></label>
+    <input type="date" id="data">
+  </fieldset>
+
+  <div class="divFlex">
+    <p class="dia">Dia:</p>
+    <p class="mes">Mês:</p>
+    <p class="ano">Ano:</p>
+  </div>
+
+</body>
+</html>
