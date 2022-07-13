@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/26/26_index.js"></script>
+  <link rel="shortcut icon" href="#">
+  <title>Exercicio 26</title>
+
+  <style>
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    } 
+
+    h1 {
+      font-size: 22px;
+    }
+
+    h3 {
+      color: #404040;
+    }
+
+    #desconto {
+      border: none;
+      background-color: none;
+      outline: none;
+      padding-left:10px ;
+      width: 40px;
+    }
+
+    #preco {
+      padding-left:10px ;
+    }
+
+    .real {
+      border: none;
+      background-color: none;
+      outline: none;
+      width: 50px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <h1> 26 - Crie uma função que calcula 5% de desconto retornando o valor do desconto.</h1>
+  
+  <h3>Insira o preço de um produto e veja o valor de um desconto de 5%</h3>
+
+  <div class="container">
+
+    <label for="preco">Preço R$ </label> 
+    <input type="number" id="preco" placeholder="preço">
+
+    <label for="desconto">desconto:</label>
+    <input type="text" id="desconto" placeholder="0" readonly>
+    <input type="text" class="real" readonly>
+    
+  </div>
+
+ 
+</body>
+</html>

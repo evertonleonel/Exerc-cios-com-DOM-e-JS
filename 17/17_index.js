@@ -24,30 +24,25 @@ function adicionarNumeros(){
 
   arrayNumeros.push(numerosDigitados);
 
-  console.log(arrayNumeros)
-
   function retornaNumerosPares(arrayNum){
     let pares = [];
     
     for( i = 0; i <= arrayNum.length; i++){
       if( arrayNum[i] % 2 == 0){
         pares.push(arrayNum[i]);
-
       }
     }
     return pares;
   }
 
   let arrayNumPares = retornaNumerosPares(arrayNumeros);
-  
-  for ( let j = 0; j < arrayNumPares; j++){
-    somaNumPares +=  arrayNumPares[j];
-  }
 
-  console.log(arrayNumPares,  'array pares')
-  console.log(somaNumPares, 'soma');
+  let resultado = arrayNumPares.reduce((a, b) =>  a +b);
+
+  mostrarSoma.value = resultado;
+
   focar(numeros);
-}
+};
 
 btnResetar.addEventListener('click', resetar)
 

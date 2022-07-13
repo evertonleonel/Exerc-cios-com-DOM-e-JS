@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/22/22_index.js"></script>
+  <link rel="shortcut icon" href="#">
+  <title>Exercicio 22</title>
+
+  <style>
+
+input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    } 
+
+    button {
+     width: 150px;
+     height: 50px; 
+    }
+
+    input {
+      width: 150px;
+      height: 42px; 
+    }
+
+    #mostrarCpf {
+      resize: none;
+      outline: none;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <h1> 22 - Crie um campo texto para preencher um CPF input maxlength="11" id="cpf" /,
+    e exiba ao lado com pontuação conforme preencher.
+  </h1>
+
+  <div>
+
+    <input type="NUMBER" id="cpf" maxlength="11" placeholder="CPF">
+    <input type="text" id="mostrarCpf" placeholder="CPF Usuário" readonly>
+    <button class="button">Enviar</button>
+    <button class="btnClear">Limpar Campos</button>
+
+  </div>
+  
+</body>
+</html>
