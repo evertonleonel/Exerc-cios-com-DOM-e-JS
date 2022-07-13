@@ -16,8 +16,8 @@ function addNumero (){
     return;
   }
 
-  if (valorInput =="" ) return;
-  if (valorInput == null ) return;
+  if (valorInput == "") return;
+  if (valorInput == null) return;
   if (valorInput == undefined) return;
 
   numArray.push(parseInt(valorInput));

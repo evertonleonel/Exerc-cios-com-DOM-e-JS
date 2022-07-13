@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <script defer src="/12/12_index.js"></script>
+
+  <title>Exercicio 12</title>
+
+  <style>
+
+      h1 {
+      font-size: 20px;
+      text-align: left;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    
+    .container {
+     margin: 20px auto;
+     text-align: center;
+     
+    }
+
+    .container1 {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    input {
+      padding: 20px;
+      width: 150px;
+      font-size: 15px;
+    }
+
+    textarea {
+      width: 500px;
+      height: 300px;
+      
+      outline: none;
+      resize: none;
+      font-size: 20px;
+    }
+    button {
+      width: 80px;
+      padding: 20px;
+      text-align: center;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>12 - Crie uma caixa de texto em html que permita somente números, depois crie um
+    botão em html que dependendo do valor introduzido na caixa de texto mostra uma
+    mensagem diferente. Sendo:<br><br>
+    - Entre 0 e 10, 10 excluído, mostra “Insuficiente”<br>
+    - Entre 10 e 14, 14 excluído, mostra “Bom”;<br>
+    - Maior que 14, mostra “Muito Bom”
+    </h1>
+
+    <div class="container">
+
+      <h4>Insira um número e receba uma mensagem</h4>
+      
+      <label for="numeros"></label>
+      <input type="number" name="num" id="numeros" placeholder="Digite um número">
+      <button class="button">Enviar</button>
+
+    </div>
+
+
+    <div class="container">
+      
+      <textarea name="" placeholder="Mensagem" class="msgTexto" readonly></textarea>
+
+    </div>
+
+</body>
+</html>
