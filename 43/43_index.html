@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/43/43_index.js"></script>
+  <link rel="shortcut icon" href="#">
+  <title>Exercicio 43</title>
+
+<style>
+
+  body {
+    display: block;
+  }
+
+
+  h1 {
+    text-align: center;
+    color: rgb(53, 53, 53);
+    font-size: 20px;
+  }
+
+  h4 {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: #066;
+  }
+
+  .container {
+   margin: 20px auto;
+   text-align: center;
+   
+  }
+
+  input {
+    padding: 20px;
+    width: 520px;
+    font-size: 15px;
+  }
+
+  ul {
+    font-size: 20px;
+  }
+
+  button {
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(221, 156, 72);
+  }
+
+  .enfeite {
+    color: #066;
+    list-style: none;
+  }
+
+  .limpar {
+    width: 120px;
+    background-color: #cfc;
+  }
+
+  .lista:nth-child(even) {
+    background-color: #55c;
+  }
+
+</style>
+
+</head>
+<body>
+
+  <h1>43 - Crie um campo texto no html que armazena o conteúdo em um array sempre
+    que você clicar no botão, e apresente em uma lista(ul) destacando os números
+    pares
+  </h1>
+
+  <h4>Cria sua lista</h4>
+
+  <div class="container">
+    <input type="text" placeholder="adicionar items" class="items">
+    <button class="botao">Enviar</button>
+    <button class="limpar">Nova Lista</button>
+  </div>
+
+  <div class="container">
+    <ul class="lista"></ul>
+  </div>
+
+</body>
+</html>

@@ -19,15 +19,35 @@
       font-size: 18px;
     }
 
+    input{
+      height: 50px;
+      width: 220px;
+      background-color: rgb(162, 155, 255);
+      color: #000;
+      font-size: 15px;
+      font-weight: bold;
+    }
     button{
-      position: absolute;
-      top: 50px;
-      left: 50px;
-
-      padding: 50px;
-      font-size: 18px;
+      font-weight: bold;
+      padding: 20px;
+      font-size: 15px;
       border-radius: 10%;
-      background-color: rgb(231, 181, 56);
+      background-color: #ccc;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    .container {
+      display: block;
+      text-align: center;
+      margin: 50px auto;
     }
 
   </style>
@@ -39,7 +59,14 @@
     clicar nele informa se a pessoa acertou o número (que você escolheu previamente).    
   </h1>
 
-  <button class="botao">Exibir Números Aleatórios</button>
+  <div class="container">
+
+    <h3>Tente acertar o número sorteado!!</h3>
+
+    <input type="number" name="" id="numeros" placeholder="Escolha um número de 0 à 9">
+    <button class="botao">Enviar</button>
+
+  </div>
 
 </body>
 </html>
