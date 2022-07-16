@@ -7,7 +7,7 @@ const arrayLista = [];
 
 botao.addEventListener('click', function enviar(){
   const nome = items.value;
-  let  li = document.createElement('li');
+  const li = document.createElement('li');
 
   if( nome == '' ) return;
   if( nome == null ) return;
@@ -15,13 +15,16 @@ botao.addEventListener('click', function enviar(){
 
   arrayLista.push(nome);
   
-  li.innerHTML = arrayLista.pop();
-  lista.appendChild(li);
-  li.classList.add('enfeite', 'lista')
+  arrayLista.forEach(item => {
+    li.innerHTML = item;
+    lista.appendChild(li);
+  });
 
+  li.classList.add('enfeite', 'lista')
+  
   items.value = '';
   items.focus();
-
+  console.log(arrayLista)
 });
 
 limpar.addEventListener('click', () =>{

@@ -14,7 +14,6 @@
     display: block;
   }
 
-
   h1 {
     text-align: center;
     color: rgb(53, 53, 53);
@@ -39,6 +38,17 @@
     font-size: 100px;
   }
 
+  .listaNomes {
+    width: 550px;
+    height: 400px;
+    resize: none;
+  }
+
+  #nameInput {
+    width: 350px;
+    height: 40px;
+  }
+
 </style>
 
 </head>
@@ -54,8 +64,11 @@
   </h1>
 
   <div class="container">
-    <input type="text" id="nameInput">
-    <button id="button">Buscar Names</button>
+    <input type="text" id="nomeInput" placeholder="digite um nome para encontra-lo">
+    <button id="botao">Buscar Names</button>
+  </div>
+  <div class="container">
+    <textarea class="listaNomes" readonly></textarea>
   </div>
 
 </body>
