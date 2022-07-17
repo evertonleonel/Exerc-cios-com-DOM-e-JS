@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/46/46_index.js"></script>
+  <link rel="shortcut icon" href="#">
+  <title>Exercicio 46</title>
+
+<style>
+
+  body {
+    display: block;
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(53, 53, 53);
+    font-size: 20px;
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: #066;
+  }
+
+  .container {
+    margin: 20px auto;
+    text-align: center;
+   
+  }
+
+  .contador {
+    font-size: 100px;
+  }
+
+  .listaInput {
+    width: 550px;
+    height: 400px;
+    resize: none;
+  }
+
+  #nameInput {
+    width: 350px;
+    height: 40px;
+  }
+
+</style>
+
+</head>
+<body>
+
+  <h1>46 - Crie um array de objetos com o seguinte conteúdo: [{name:'Aegir', power:10},
+    {name:'Aud', power: 5} , {name:'Balder', power:7}, {name:'Bragi', power:4}, {name:
+    'Búri', power:9}, {name: 'Dag', power:10}, {name:'Dellingr', power: 3}].
+    Crie também um select com duas opções, sendo: “do maior para o menor” e “do
+    menor para a maior” em que conforme o usuário seleciona ele ordena os deuses
+    através do poder e mostra em uma lista
+
+  </h1>
+
+  <div class="container">
+    <input type="text" id="nomeInput" placeholder="digite um nome para encontra-lo">
+    <button id="botao">Buscar Names</button>
+  </div>
+  <div class="container">
+    <textarea class="listaInput" readonly></textarea>
+  </div>
+
+</body>
+</html>
