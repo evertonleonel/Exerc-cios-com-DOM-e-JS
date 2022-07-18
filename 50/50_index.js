@@ -15,7 +15,6 @@ setInterval ( function (){
     seconds.innerHTML = s + '<span> :</span>';
     ampm.innerHTML = am;
     
-    
     // Converter 24h para 12h;
     
     if ( h > 12) {
