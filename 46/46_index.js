@@ -1,58 +1,54 @@
-const nomeInput = document.getElementById('nomeInput');
-const botao = document.getElementById('botao');
-const listaInput = document.querySelector('.listaNomes');
+const selecionarOrdem = document.getElementById('selecionarOrdem');
+const listaInput = document.querySelector('.listaInput');
+const p = document.querySelector('.p');
 
-const listaDeuses = [ {name:'Aegir', power:10}, {name:'Aud', power: 5} ,{name:'Balder', power:7},
-                   {name:'Bragi', power:4}, {name:'Búri', power:9},   {name: 'Dag', power:10},
-                   {name:'Dellingr', power: 3} ];
+function ListarDeuses (){
 
+  this.lista = [  {name:'Aegir', power:10}, {name:'Aud', power: 5} ,{name:'Balder', power:7},
+                  {name:'Bragi', power:4}, {name:'Búri', power:9},   {name: 'Dag', power:10},
+                  {name:'Dellingr', power: 3} ];                  
+}
 
-botao.addEventListener('click',() =>{
-  const nomes = nomeInput.value;
+ function menorParaMaior(a,b) {
+    if(a.power < b.power) return -1;
+    if(a.power > b.power) return 1;
+    return 0;
+  };
 
-  if( nomes == '' ) return;
-  if( nomes == null ) return;
-  if( nomes == undefined ) return;
-
-  // const nomesFiltrados = listaDeuses.filter((nomes) => {
-  //   return nomes.nome.includes('a')
-  // })
-
-
-
-  // const filtarNomes = listaDeuses.filter(nomes => {
-    
-  //   return listaDeuses.includes(nomes.value);
-  // })
-  // console.log(filtarNomes)
-
- 
-
-
-
-
-  const retornaNomes = listaDeuses.filter(nomes =>  {return listaDeuses.includes('nomes')});
-  console.log(retornaNomes, 'nome')  
-  
-
-
-  // for ( let deuses of listaDeuses){
-  //   let nomeDeuses = deuses.name;
-    
-  //   if( nomes == nomeDeuses){
-  //     listaNomes.value = nomeDeuses;
-      
-  //     console.log(listaNomes,'nomes')
-      // console.log(listaDeuses, 'nomedeuses')
-  //   }
-  // };
-
-  // limparInput(nomeInput);
-});
-  
-
-
-function limparInput(input){
-  input.value ='';
-  input.focus()
+function maiorParaMenor(a,b) {
+  if(a.power > b.power) return -1;
+  if(a.power < b.power) return  1;
+  return 0;
 };
+
+const listaCrescente = new ListarDeuses();
+listaCrescente.lista.sort(menorParaMaior);
+
+const novaListaCrescente = listaCrescente.lista.map((itens) =>{
+  return itens.name +  ' poder:' +  itens.power + " ";
+});
+
+//Com For OF  = muito klanke ;x
+// for (let itens of listaCrescente.lista){
+//   novosItens += itens.name + ' power: ' + itens.power +'\n'
+//   console.log(novosItens)
+// }
+
+const listaDecrescente = new ListarDeuses();
+listaDecrescente.lista.sort(maiorParaMenor);
+
+const novaListaDecrescente = listaDecrescente.lista.map((itens) =>{
+  return itens.name +  ' poder:' +  itens.power + " "
+});
+
+function selecionou(){
+  const selectOrder = selecionarOrdem.value
+
+  if (selectOrder == 'select'){
+    p.innerHTML = '';
+  }else if (selectOrder == 'crescente'){
+    p.innerHTML =  novaListaCrescente;
+  }else if (selectOrder == 'decrescente'){
+    p.innerHTML = novaListaDecrescente;
+  }
+}

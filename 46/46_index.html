@@ -64,11 +64,21 @@
   </h1>
 
   <div class="container">
-    <input type="text" id="nomeInput" placeholder="digite um nome para encontra-lo">
-    <button id="botao">Buscar Names</button>
+
+    <form action="">
+
+      <select name="select" id="selecionarOrdem" onchange="selecionou()">
+        <option value="select">Selecionar Ordem</option>
+        <option value="crescente">Ordem crescente</option>
+        <option value="decrescente">Ordem decrescente</option>
+      </select>
+     
+    </form>
+
   </div>
+
   <div class="container">
-    <textarea class="listaInput" readonly></textarea>
+    <p class="p"></p>
   </div>
 
 </body>
