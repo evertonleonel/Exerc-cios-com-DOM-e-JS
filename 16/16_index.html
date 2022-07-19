@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <script defer src="/16/16_index.js"></script>
+  <title>Exercício 16</title>
+
+  <style>
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    h1 {
+      font-size: 20px;
+      text-align: left;
+    }
+
+    input {
+      width: 50px;
+      height: 30px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 15px;
+    }
+
+    .resultado {
+      width: 100px;
+      height: 30px;
+      font-size: 30px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>16 - Cada espectador de um cinema respondeu a um questionário no qual constava sua idade e a sua opinião em relação ao filme: ótimo - 3, bom - 2, regular -1.
+    Faça um programa que receba a idade e a opinião de 15 espectadores, calcule e imprima:<br>
+    ● a média das idades das pessoas que responderam ótimo;<br>
+    ● a quantidade de pessoas que responderam regular;<br>
+    ● a porcentagem de pessoas que responderam bom entre todos os espectadores analisados.</h1>
+
+    <div class="container">
+      <h3>Avalie nosso Cinema</h3>
+
+        <p>Qual a sua idade?</p>
+        <input type="number"id="idade">
+
+        <p>Nota do filme</p>
+        <label for="otimo">
+          <input type="checkbox" name="otimo" id="otimo">
+          ÓTIMO
+        </label>
+        <label for="bom">
+          <input type="checkbox" name="bom" id="bom">
+          BOM
+        </label>
+        <label for="regular">
+          <input type="checkbox" name="regular" id="regular">
+          REGULAR
+        </label>
+        <br>
+        <br>
+        <button id="btnAvaliar" disabled>Enviar Avaliação</button>
+    </div>
+    <div class="container">
+      <h3>Resultado da avaliação</h3>
+
+      <label for="#">
+        <input type="text" class="resultado" placeholder="Σ" id="mediaOtimo">
+        média da idade que responderam ótimo
+      </label>
+      <br>
+      <br>
+      <label for="#">
+        <input type="text" class="resultado" placeholder="{}" id="qtdRegular">
+        quantidade de pessoas que responderam regular
+      </label>
+      <br>
+      <br>
+      <label for="#">
+        <input type="text" class="resultado" placeholder="%" id="porcemBom">
+        % geral de pessoas que responderam bom
+      </label>
+    </div>
+
+</body>
+</html>
