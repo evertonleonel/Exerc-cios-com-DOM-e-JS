@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
   <script defer src="/18/18_index.js"></script>
   <link rel="shortcut icon" href="#">
   <title>Exercicio 18</title>
@@ -13,6 +14,7 @@
     body {
       display: block;
       position: relative;
+      font-family: 'Montserrat', sans-serif;
     }
 
     nav a {
@@ -52,6 +54,35 @@
       margin: 20px auto;
       text-align: center;
       max-width: 700px;
+      background-color: #eee;
+    }
+
+    .container label input{
+      margin-bottom: 10px;
+    }
+
+    .btnEnviar {
+      background-color: rgb(114, 248, 150);
+      font-size: 16px;
+      border-radius: 10px;
+      width: 80px;
+      padding: 10px;
+    }
+
+    .limparCampos {
+      background-color: rgb(166, 144, 237);
+      font-size: 16px;
+      border-radius: 10px;
+      width: 100px;
+      padding: 10px;
+    }
+
+    input {
+      height: 20px;
+    }
+
+    #feminino, #masculino {
+      width: 40px;
     }
     
   </style>
@@ -88,6 +119,7 @@
         Total de Homens
         <input type="text" name="" id="totalHomens">
       </label>
+      <br>
       <label for="#">
         Total de Mulheres
         <input type="text" name="" id="totalMulheres">
@@ -98,6 +130,7 @@
         Média Idade dos Homens
         <input type="text" name="" id="idadeHomens">
       </label>
+      <br>
       <label for="#">
         Média Peso das Mulheres
         <input type="text" name="" id="pesoMulheres">

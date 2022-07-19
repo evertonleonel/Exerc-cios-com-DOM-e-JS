@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
   <script defer src="/25/25_index.js"></script>
   <link rel="shortcut icon" href="#">
   <title>Exercicio 25</title>
@@ -13,6 +14,7 @@
     body {
       display: block;
       position: relative;
+      font-family: 'Montserrat', sans-serif;
     }
 
     nav a {
@@ -35,11 +37,17 @@
     }
 
     h1 {
-      font-size: 22px;
+      font-size: 18px;
     }
 
     h3 {
       color: #404040;
+      font-style: italic;
+    }
+
+    .container {
+      margin-top: 100px;
+      margin-left: 50px;
     }
 
   </style>
@@ -49,12 +57,18 @@
   
   <h1> 25 - Crie uma função que recebe 2 parâmetros e retorna a multiplicação deles.</h1>
   
-  <h3>Informe dois parâmetros para serem multiplicados e veja o resultado</h3>
-  <h5>Apenas números</h5>
-  <input type="text" id="parametro1" placeholder="1° parametro">
-  <input type="text" id="parametro2" placeholder="2° parametro">
-  <button class="botao">Enviar</button>
-  <input type="text" id="resultado"  placeholder="resultado">
+  <div class="container">
+
+    <h3>Informe dois parâmetros para serem multiplicados e veja o resultado</h3>
+
+    <h5>Apenas números</h5>
+
+    <input type="text" id="parametro1" placeholder="1° parametro">
+    <input type="text" id="parametro2" placeholder="2° parametro">
+    <button class="botao">Enviar</button>
+    <input type="text" id="resultado"  placeholder="resultado">
+
+  </div>
 
   <nav>
     <a href="/00navegar/navegar.html">Voltar à navegação</a>
