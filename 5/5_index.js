@@ -1,8 +1,11 @@
 const alturaUsuario = document.getElementById('alturaUsuario');
 const checkboxMasculino = document.getElementById('masculino');
+const totalM = document.getElementById('totalM');
 const checkboxFeminino = document.getElementById('feminino');
+const totalF = document.getElementById('totalF');
 const mostrarAltura = document.getElementById('mostrarAltura');
 const btnEnviar = document.querySelector('.btnEnviar');
+const resultadoAltura = document.querySelector('.resultadoAltura')
 
 let arrayAltura = [];
 
@@ -37,10 +40,13 @@ function habilitarBotao(){
 
 btnEnviar.addEventListener('click', adicionarInformacoes);
 
-function adicionarInformacoes (){
-  const qtdFeminino = 0;
-  const qtdMasculinho = 0;
+let qtdMasculinho = 0;
+let qtdFeminino = 0;
 
+const arrayM = [];
+const arrayF = [];
+
+function adicionarInformacoes (){
   let altura = alturaUsuario.value;
   
   altura = parseFloat(altura);
@@ -51,30 +57,44 @@ function adicionarInformacoes (){
   if (typeof altura !== 'number') return;
 
   arrayAltura.push(altura);
-  console.log('array',arrayAltura)
-  
+
   if (arrayAltura.length === 5) {
     let maiorAltura = arrayAltura.reduce(function (a,b){
     return Math.max(a,b).toFixed(2);
     })
-
     mostrarAltura.value = maiorAltura;
+    compararAlturas();
+    console.log(compararAlturas)
   }
 
-  if(checkboxMasculino === true){
-    qtdMasculinho + 1;
+  if(checkboxMasculino.checked ){
+   arrayM.push(altura)
+    qtdMasculinho++;
+    totalM.value = qtdMasculinho;
+   
+  }else if (checkboxFeminino.checked){
+    arrayF.push(altura)
+    qtdFeminino++;
+    totalF.value = qtdFeminino;
+    
   }
 
-  console.log(qtdMasculinho)
+  function compararAlturas (){
+   
+    let maiorAlturaM = arrayM.reduce(function (a,b){
+      return Math.max(a,b).toFixed(2);
+      })
+     
+    let maiorAlturaF = arrayF.reduce(function (a,b){
+      return Math.max(a,b).toFixed(2);
+      })
+
+    if (maiorAlturaM > maiorAlturaF){
+      resultadoAltura.innerHTML = ' A maior altura informada é de: Homem';
+    }else{
+      resultadoAltura.innerHTML = ' A maior altura informada é de: Mulher';
+    }
+  }
 
 };
 
-// alturaUsuario.addEventListener('keyup', function(e){
-//   if(e.keyCode === 13){
-//     if (checkboxMasculino.checked === true || checkboxFeminino.checked === true){
-//       adicionarInformacoes();
-//       alturaUsuario.focus();
-//       alturaUsuario.value = '';
-//     }
-//   }
-// })

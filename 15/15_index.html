@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <script defer src="/15/15_index.js"></script>
+  <title>Exercício 15</title>
+
+  <style>
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    h1 {
+      text-align: left;
+      color: rgb(53, 53, 53);
+      font-size: 20px;
+    }
+    
+    
+
+  </style>
+
+</head>
+<body>
+
+  <h1> 15 - Tem-se um conjunto de dados contendo a altura e o sexo (M ou F) de 15
+    pessoas. Faça um programa que calcule e escreva: <br>
+    ● a maior e a menor altura do grupo;<br>
+    ● a média de altura das mulheres;<br>
+    ● o número de homens.
+    </h1>
+
+    <form action="#" method ='get'>
+
+      <fieldset>
+
+        <legend>Cadastrar Dados Usuário</legend>
+
+        <h3> Informe sua altura e sexo</h3>
+
+          <label for="alturaUsuario">Altura</label>
+         
+          <input type="text" name="" id="alturaUsuario">
+
+          <label for="masculino">M</label>
+          <input type="checkbox" name="masculino" id="masculino">
+
+          <label for="feminino">F</label>
+          <input type="checkbox" name="feminino" id="feminino">
+
+      </fieldset>
+      <button class="btnEnviar" type="button" disabled>Enviar</button>
+      <button class="limparCampos" type="button">Limpar Tudo</button>
+    </form>
+
+    <br>
+    <fieldset>
+      <legend> Resultado Geral</legend>
+      <br>
+      <label for="mostrarAltura">
+        <input type="text" id="mostrarAlturaMaior">
+        Maior Altura
+      </label>
+
+      <br>
+      <label for="mostrarAltura">
+        <input type="text" id="mostrarAlturaMenor">
+        Menor Altura
+      </label>
+  
+      <p class="resultadoAlturaMaior">A maior altura do grupo é de:</p>
+      <p class="resultadoAlturaMenor">A menor altura do grupo é de:</p>
+
+      <h3>Quantidade de pessoas de cada sexo</h3>
+      <label for="totalM">
+        <input type="text" name="" id="totalM">
+        Masculino
+        <br>
+        <label for="totalF">
+          <input type="text" name="" id="totalF">
+          Feminino
+        </label>
+        
+        <h3>Média da Altura das Mulheres</h3>
+        <input type="text" id="mediaAlturaMulheres">
+    </fieldset>
+  
+</body>
+</html>

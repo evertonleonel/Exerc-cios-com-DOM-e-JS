@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/18/18_index.js"></script>
+  <link rel="shortcut icon" href="#">
+  <title>Exercicio 18</title>
+
+  <style>
+
+    h1 {
+      font-size: 20px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    } 
+
+    .container {
+      margin: 20px auto;
+      text-align: center;
+      max-width: 700px;
+    }
+    
+  </style>
+
+</head>
+<body>
+  
+  <h1>18 - Faça um programa que receba a idade, o peso e o sexo de 10 pessoas. Calcule
+    e imprima:<br>
+    ● total de homens;<br>
+    ● total de mulheres;<br>
+    ● média das idades dos homens;<br>
+    ● média dos pesos das mulheres.
+    </h1>
+
+    <div class="container">
+      <h3>Cadastro de Usuário</h3>
+
+      <input type="text"  id="idade" placeholder="idade">
+      <input type="text"  id="peso" placeholder="peso">
+      
+      <label for="masculino">M</label>
+      <input type="checkbox" name="masculino" id="masculino">
+
+      <label for="feminino">F</label>
+      <input type="checkbox" name="feminino" id="feminino">
+      <button class="btnEnviar" type="button" disabled>Enviar</button>
+      <button class="limparCampos" type="button">Limpar Campos</button>
+    </div>
+
+    <div class="container">
+      <h3>Resultado</h3>
+      <label for="#">
+        Total de Homens
+        <input type="text" name="" id="totalHomens">
+      </label>
+      <label for="#">
+        Total de Mulheres
+        <input type="text" name="" id="totalMulheres">
+      </label>
+      <br>
+      <br>
+      <label for="#">
+        Média Idade dos Homens
+        <input type="text" name="" id="idadeHomens">
+      </label>
+      <label for="#">
+        Média Peso das Mulheres
+        <input type="text" name="" id="pesoMulheres">
+      </label>
+    </div>
+
+</body>
+</html>

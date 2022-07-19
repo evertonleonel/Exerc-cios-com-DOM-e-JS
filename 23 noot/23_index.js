@@ -1,13 +1,14 @@
 let cpfPoint = document.getElementById('cpfPoint');
+let mostrarCpf = document.getElementById('mostrarCpf');
 let button = document.querySelector('.button');
+let btnClear = document.querySelector('.btnClear');
 
 
-button.addEventListener('click', function(){
-  
-  console.log(cpfPoint.value)
-})
+cpfPoint.addEventListener("blur", () => {
+let value = cpfPoint.value.replace(/\./g, "");
 
-
+mostrarCpf.value = value;
+});
 
 function mascaraCpf ()  {
   let cpf = cpfPoint.value.length;
@@ -19,6 +20,12 @@ function mascaraCpf ()  {
   };
 
 };
+
+btnClear.addEventListener('click', ()=>{
+  cpfPoint.value = '';
+  mostrarCpf.value = '';
+  cpfPoint.focus;
+})
 
 
 

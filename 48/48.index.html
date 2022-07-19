@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/48/48_index.js"></script>
+  <link rel="shortcut icon" href="#">
+  <title>Exercicio 48</title>
+
+<style>
+
+  body {
+    display: block;
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(53, 53, 53);
+    font-size: 20px;
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: #066;
+  }
+
+  .container {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 700px;
+  }
+
+  .estilo {
+    color: rgb(49, 0, 102);
+    list-style: none;
+  }
+
+  .deletar {
+    background-color: rgb(242, 100, 100);
+   
+    border-radius: 10%;
+  }
+
+</style>
+
+</head>
+<body>
+
+  <h1> 48 - Crie um array de objetos com o seguinte conteúdo: [{name:'Aegir', power:10},
+    {name:'Aud', power: 5} , {name:'Balder', power:7}, {name:'Bragi', power:4}, {name:
+    'Búri', power:9}, {name: 'Dag', power:10}, {name:'Dellingr', power: 3}]. Mostre os
+    deuses em uma lista com um botão ao lado de cada deus escrito “deletar”.
+    Conforme o usuário aperta no botão os deuses precisam sumir da lista.
+    
+  </h1>
+
+    <fieldset class="container">
+      <h4>Cadastro de deuses</h4>
+      <input type="text" id="nome" placeholder="digite um nome">
+      <input type="number" id="poder" placeholder="dite o poder">
+      <button id="botao">Inserir</button>
+      <button class="limpar">Limpar lista</button>
+    </fieldset>
+
+  <div class="container">
+   <ul class="lista">
+   </ul>
+  </div>
+
+</body>
+</html>
