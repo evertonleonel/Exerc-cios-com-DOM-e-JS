@@ -3,13 +3,16 @@ const chk_otimo = document.getElementById('otimo');
 const chk_bom = document.getElementById('bom');
 const chk_regular = document.getElementById('regular');
 const mediaOtimo = document.getElementById('mediaOtimo');
-const qtdRegular = document.getElementById('qtdRegular');
+const numRegular = document.getElementById('numRegular');
 const porcemBom = document.getElementById('porcemBom');
 const btnAvaliar = document.getElementById('btnAvaliar');
+const btnLimpar = document.getElementById('btnLimpar');
 
 const arrayIdade = [];
 const arrayIdadeOtimo = [];
 const arrayBom = [];
+let qtdReggular =0;
+let qtdBom = 0;
 
 function checado(ele){
   return ele.checked;
@@ -47,26 +50,65 @@ function habilitarBotao(){
   };
 };
 
+btnAvaliar.addEventListener('click', ()=>{
+  let idades = Number(idade.value);
+  
+  if (idades === "") return;
+  if (idades === null) return;
+  if (idades === undefined) return;
+  
+  console.log(idades, 'entrou idades')
 
-idade.addEventListener('uppress', (e)=> {
-  const keyCode = (e.keyCode ? e.keyCode : e.wich);
+  arrayIdade.push(idades);
+  console.log(arrayIdade, 'array de Idade')
 
-  if(keyCode >= 65 && keyCode <= 90){
-    e.preventDefault;
-  }else{
-    console.log(e.keyCode,'e.keyCode')
+  if(checado(chk_otimo)){
+    arrayIdadeOtimo.push(idades);
+    
+   }else if (checado(chk_regular)){
+    qtdReggular++;
+    
+   }else if(checado(chk_bom)){
+    qtdBom++;
+   }
+
+   function somar (a,b){
+    return a + b;
+   }
+
+   const totalSomaOtimo = arrayIdadeOtimo.reduce(somar,0);
+   const mediaIdadesOtimo = totalSomaOtimo / arrayIdadeOtimo.length;
+  
+   function porcentagem(qtd){
+    return qtd / 15;
+   }
+
+   if (arrayIdade.length === 15) {
+    const porcentagemBom = porcentagem(qtdBom).toFixed(2);
+
+    porcemBom.value = `${porcentagemBom}%`;
+
+    mediaIdadesOtimo > 0 ? mediaOtimo.value = `${mediaIdadesOtimo.toFixed(1)} anos` :  mediaOtimo.value = 0;
+
+    numRegular.value = qtdReggular;
+
+    alert('Obrigado pela avaliação, confira o resultado!!')
   }
-})
 
-// btnAvaliar.addEventListener('click', ()=>{
-//   let idades = idade.value;
-  
-//   idades = Number(idades);
-//   console.log( typeof idades);
-  
-//   if (idades === "") return;
-//   if (idades === null) return;
-//   if (idades === undefined) return;
-//   if (idades === 'string') return;
+  idade.value ='';
+  idade.focus();
 
-// });
+});
+
+btnLimpar.addEventListener('click', limparTodosInputs);
+
+function limparTodosInputs(){
+  idade.focus();
+  idade.value ='';
+  porcemBom.value = '';
+  mediaOtimo.value = '';
+  numRegular.value = '';
+  chk_otimo.checked = false;
+  chk_bom.checked = false;
+  chk_regular.checked = false;
+};
