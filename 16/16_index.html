@@ -10,6 +10,30 @@
 
   <style>
 
+    body {
+      display: block;
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgb(142, 142, 142);
+      font-size: 25px;
+      font-weight: 600;
+      display: block;
+      padding: 10px 0;
+      transition: .3 ease;
+      position: fixed;
+      right: 10px;
+      bottom: 0;
+    }
+    
+    nav a:hover {
+      color: rgb(43, 43, 42);
+      background-color: rgb(182, 174, 66);
+    }
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
@@ -77,6 +101,7 @@
         <br>
         <br>
         <button id="btnAvaliar" disabled>Enviar Avaliação</button>
+        <button id="btnLimpar">Limpar tudo</button>
     </div>
     <div class="container">
       <h3>Resultado da avaliação</h3>
@@ -88,7 +113,7 @@
       <br>
       <br>
       <label for="#">
-        <input type="text" class="resultado" placeholder="{}" id="qtdRegular">
+        <input type="text" class="resultado" placeholder="{}" id="numRegular">
         quantidade de pessoas que responderam regular
       </label>
       <br>
@@ -98,6 +123,10 @@
         % geral de pessoas que responderam bom
       </label>
     </div>
+
+    <nav>
+      <a href="/00navegar/navegar.html">Voltar à navegação</a>
+    </nav>
 
 </body>
 </html>

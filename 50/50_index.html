@@ -14,14 +14,38 @@
         padding: 0;
         box-sizing: border-box;
     }
-
+    
     html {
         font-size: 62.5%;
     }
 
+    body {
+      display: block;
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgb(142, 142, 142);
+      font-size: 25px;
+      font-weight: 600;
+      display: block;
+      padding: 10px 0;
+      transition: .3 ease;
+      position: fixed;
+      right: 10px;
+      bottom: 0;
+    }
+    
+    nav a:hover {
+      color: rgb(43, 43, 42);
+      background-color: rgb(182, 174, 66);
+    }
+
     picture {
         font-family: 'Oswald', sans-serif;
-        background-color: rgb(84, 84, 239);
+        background-color:#ccc;
         
         display: flex;
         align-items: center;
@@ -42,11 +66,10 @@
     }
 
     .container {
-        background-color: rgb(84, 84, 239);
+        background-color:#ccc;
         text-align: center;
-        color: white;
+        color: rgb(43, 43, 43);
     }
-
 
     </style>
 
@@ -66,5 +89,10 @@
             <div class="ampm">PM</div>
         </div>
     </picture>
+
+    <nav>
+        <a href="/00navegar/navegar.html">Voltar à navegação</a>
+      </nav>
+
 </body>
 </html>

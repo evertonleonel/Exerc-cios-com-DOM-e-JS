@@ -9,6 +9,31 @@
   <title>Exercício 9</title>
 
   <style>
+
+    body {
+      display: block;
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgb(142, 142, 142);
+      font-size: 25px;
+      font-weight: 600;
+      display: block;
+      padding: 10px 0;
+      transition: .3 ease;
+      position: fixed;
+      right: 10px;
+      bottom: 0;
+    }
+    
+    nav a:hover {
+      color: rgb(43, 43, 42);
+      background-color: rgb(182, 174, 66);
+    }
+
     h1 {
       font-size: 20px;
       text-align: center;
@@ -22,7 +47,12 @@
   <h1> 9 - Crie um botão em html, que ao ser clicado abre uma janela nova com o site:
     https://www.gx2.com.br
   </h1>
-    <button class="botao" type="button">Ir para GX2</button>
+
+  <button class="botao" type="button">Ir para GX2</button>
+
+  <nav>
+    <a href="/00navegar/navegar.html">Voltar à navegação</a>
+  </nav>
   
 </body>
 </html>

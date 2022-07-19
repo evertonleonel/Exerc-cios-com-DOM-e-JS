@@ -18,21 +18,19 @@ botao.addEventListener('click',() =>{
   //   return nomes.nome.includes('a')
   // })
 
-
-
-  // const filtarNomes = listaDeuses.filter(nomes => {
+  const filtarNomes = listaDeuses.filter(nomes => {
     
-  //   return listaDeuses.includes(nomes.value);
-  // })
-  // console.log(filtarNomes)
+    return listaDeuses.includes(nomes.value);
+  })
+  console.log(filtarNomes, 'nome filtado')
 
  
 
 
 
 
-  const retornaNomes = listaDeuses.filter(nomes =>  {return listaDeuses.includes('nomes')});
-  console.log(retornaNomes, 'nome')  
+  // const retornaNomes = listaDeuses.filter(nomes =>  {return listaDeuses.includes('nomes')});
+  // console.log(retornaNomes, 'nome')  
   
 
 
