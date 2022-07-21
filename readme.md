@@ -1,5 +1,7 @@
 # Desafios Pre Rocket Talents
 
-## Para visualizar a resolução de cada exercício basta acessar a pasta '00navegar'.
+### Para visualizar a resolução de cada exercício, acesse a pasta '00navegar'.
 
-Agora basta você escolher para qual exercício seguir de forma interativa!.
+### Abra o arquivo navegar.html em live server.
+
+Com o html já aberto, basta escolher para qual desafio deseja seguir de forma interativa!.
