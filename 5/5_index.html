@@ -13,7 +13,6 @@
 
     body {
       display: block;
-      background-color: #ccc;
       position: relative;
       font-family: 'Montserrat', sans-serif;
     }
@@ -64,6 +63,12 @@
       width: 200px;
     }
 
+    .container {
+      margin: 20px auto;
+      text-align: center;
+      max-width: 700px;
+    }
+
   </style>
 
 </head>
@@ -75,7 +80,7 @@
 
       <h3>Dados do usuário</h3>
 
-      <form action="#" method ='get'>
+      <form action="#" method ='get' class="container">
 
         <fieldset>
 
@@ -95,33 +100,37 @@
   
          
         </fieldset>
+        <br>
         <button class="btnEnviar" type="button" disabled>Enviar</button>
        
       </form>
 
       <br>
-
-      <label for="mostrarAltura">
-        <input type="text" id="mostrarAltura">
-        Maior Altura informada
-      </label>
-      <p class="resultadoAltura">A maior altura informada é de:</p>
-     
-      <br>
-      <br>
-      <h4>Quantidade de pessoas de cada sexo</h4>
-      <label for="totalM">
-        <input type="text" name="" id="totalM">
-          Masculino
+      <div class="container">
+        <label for="mostrarAltura">
+          Maior Altura informada
+          <input type="text" id="mostrarAltura">
+        </label>
+        <p class="resultadoAltura">A maior altura informada é de:</p>
+       
         <br>
-      <label for="totalF">
-          <input type="text" name="" id="totalF">
-          Feminino
-      </label>
 
-      <nav>
-        <a href="/00navegar/navegar.html">Voltar à navegação</a>
-      </nav>
+        <h4>Quantidade de pessoas de cada sexo</h4>
+        <label for="totalM">
+          Masculino
+          <input type="text" name="" id="totalM">
+          <br>
+          <br>
+        <label for="totalF">
+          Feminino
+            <input type="text" name="" id="totalF">
+        </label>
+  
+        <nav>
+          <a href="/00navegar/navegar.html">Voltar à navegação</a>
+        </nav>
+  
+      </div>
 
 </body>
 </html>
