@@ -41,6 +41,7 @@ function adicionarNumeros(){
 
   mostrarSoma.value = resultado;
 
+  numeros.value ='';
   focar(numeros);
 };
 

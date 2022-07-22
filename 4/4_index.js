@@ -16,9 +16,13 @@ const totalMenorIdade = document.querySelector('.totalMenorIdade');
   }
 
   btn_enviar.addEventListener('click', function() {
-
     const nome = nome_input.value;
     const idade = idade_input.value;
+
+    if (nome == '') return;
+    if (idade == '') return;
+    if (nome  === null) return;
+    if (nome  === undefined) return;
 
     const row = corpo_tabela.insertRow(0);
     const celula1 = row.insertCell(0);

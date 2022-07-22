@@ -88,6 +88,7 @@ function resetar(){
 numArray = [];
 numeros.value = '';
 maiorNotas.value = '';
+limiteNumeros.innerHTML = '';
 focar(numeros)
 }
 

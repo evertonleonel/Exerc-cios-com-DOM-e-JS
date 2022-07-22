@@ -3,29 +3,31 @@ let mostrarCpf = document.getElementById('mostrarCpf');
 let button = document.querySelector('.button');
 let btnClear = document.querySelector('.btnClear');
 
-
 cpfPoint.addEventListener("blur", () => {
-let value = cpfPoint.value.replace(/\./g, "");
-
-mostrarCpf.value = value;
+  // mascaraCpf();
 });
 
-function mascaraCpf ()  {
-  let cpf = cpfPoint.value.length;
+function mascaraCpf()  {
+  const tamanhoCpf = cpfPoint.value.length;
+  let novoCpf = cpfPoint.value;
 
-  if(cpf === 3 || cpf === 7){
-    cpf += '.';
-  }else if(cpf === 11){
-    cpf += '-';
-  };
+  switch(tamanhoCpf){
+    case 3:
+      novoCpf += '.';
+      break;
+    case 7:
+      novoCpf += '.';
+      break;
+    case 11:
+      novoCpf += '-';
+      break;
+  }
 
+  cpfPoint.value = novoCpf;
 };
 
-btnClear.addEventListener('click', ()=>{
-  cpfPoint.value = '';
-  mostrarCpf.value = '';
-  cpfPoint.focus;
-})
-
-
-
+// btnClear.addEventListener('click', ()=>{
+//   cpfPoint.value = '';
+//   mostrarCpf.value = '';
+//   cpfPoint.focus;
+// })

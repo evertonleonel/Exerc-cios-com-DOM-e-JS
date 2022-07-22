@@ -34,7 +34,6 @@ botao.addEventListener('click',()=>{
   
 })
 
-
 botaoReset.addEventListener('click', ()=>{
   limparInput();
   frase.focus();

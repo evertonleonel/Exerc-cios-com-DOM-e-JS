@@ -5,6 +5,7 @@ const checkboxFeminino = document.getElementById('feminino');
 const totalF = document.getElementById('totalF');
 const mostrarAltura = document.getElementById('mostrarAltura');
 const btnEnviar = document.querySelector('.btnEnviar');
+const btnLimpar = document.querySelector('.btnLimpar');
 const resultadoAltura = document.querySelector('.resultadoAltura')
 
 let arrayAltura = [];
@@ -96,5 +97,14 @@ function adicionarInformacoes (){
     }
   }
 
+  alturaUsuario.value = '';
 };
 
+btnLimpar.addEventListener('click', () => {
+  alturaUsuario.value = '';
+  checkboxMasculino.checked = false;
+  checkboxFeminino.checked = false;
+  mostrarAltura.value = '';
+  totalF.value = '';
+  totalM.value = '';
+})

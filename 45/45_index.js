@@ -14,6 +14,7 @@ botao.addEventListener('click',() =>{
   if( nomes == null ) return;
   if( nomes == undefined ) return;
 
+  
   for ( let deuses of listaDeuses){
     nomeDeuses.push(deuses.name)
   }
