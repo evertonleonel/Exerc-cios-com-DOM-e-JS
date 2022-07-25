@@ -2,9 +2,15 @@ const nomeInput = document.getElementById('nomeInput');
 const botao = document.getElementById('botao');
 const listaInput = document.querySelector('.listaInput');
 
-const listaDeuses = [ {name:'Aegir', power:10}, {name:'Aud', power: 5} ,{name:'Balder', power:7},
-                   {name:'Bragi', power:4}, {name:'Búri', power:9},   {name: 'Dag', power:10},
-                   {name:'Dellingr', power: 3} ];
+const listaDeuses = [
+  { name: 'Aegir', power: 10 },
+  { name: 'Aud', power: 5 },
+  { name: 'Balder', power: 7 },
+  { name: 'Bragi', power: 4 },
+  { name: 'Búri', power: 9 },
+  { name: 'Dag', power: 10 },
+  { name: 'Dellingr', power: 3 }
+];
 
 botao.addEventListener('click',() =>{
   let nomeDeuses = [];

@@ -9,30 +9,46 @@ let arrayFrases = [];
 // let filtro = nomes.filter(item => item.includes("Carvalho"));
 // console.log(filtro);
 
-
-
 botao.addEventListener('click',()=>{
-  let fraseValor = frase.value;
+  const fraseValor = frase.value;
   
   if( fraseValor == "" ) return;
   if( fraseValor == null ) return;
   if( fraseValor == undefined ) return;
+  if( arrayFrases.length > 0 ) arrayFrases.pop();
 
   arrayFrases.push(fraseValor);
-  
-  function VerificarAssim(frase){
+ 
+  function verificarAssim(frase){
     return frase.includes('assim');
   }
 
-  let filtrado = arrayFrases.filter(VerificarAssim);
-  
-  if (filtrado.indexOf('assim')){
+  const filtrado = arrayFrases.filter(verificarAssim);
+
+  if (filtrado.length > 0){
     texto.value = ` A frase: " ${filtrado} ", possui a palavra "assim".`;
   } else {
     texto.value = `A palavra 'assim' não foi encontrada :(. Tente novamente!!`
   }
   
 })
+
+//botao.addEventListener('click',()=>{
+//  let novoTexto = '';
+//  const fraseValor = frase.value;
+//  
+//  if( fraseValor == "" ) return;
+//  if( fraseValor == null ) return;
+//  if( fraseValor == undefined ) return;
+//
+//  if (fraseValor.includes('assim')){
+//    novoTexto = ` A frase: " ${fraseValor} ", possui a palavra "assim".`;
+//  } else {
+//    novoTexto = `A palavra 'assim' não foi encontrada :(. Tente novamente!!`
+//  }
+//
+//  texto.value = novoTexto;
+//})
 
 botaoReset.addEventListener('click', ()=>{
   limparInput();
